@@ -58,10 +58,10 @@ Connect-MicrosoftTeams
 
 $MeetingPolicy = Get-CsTeamsMeetingPolicy | Select-Object -Property * -ExcludeProperty XsAnyElements,XsAnyAttributes,Element,CommaSeparator,pscomputerName,RunspaceId,PSShowComputerName 
 $MeetingPolicyPiv = PivotPolicyData -Data $MeetingPolicy -PolicyURI "https://docs.microsoft.com/en-us/powershell/module/skype/set-csteamsmeetingpolicy?view=skype-ps"
-$MeetingPolicyPiv[0].Table | Export-csv -Path "C:\Users\604117500\OneDrive - BT Plc\Documents\GIT Repos\MS Teams\Meeting Policy Evaluation\TeamsMeetingPolicies.csv" -NoTypeInformation
+$MeetingPolicyPiv[0].Table | Export-csv -Path "C:\Users\Documents\GIT Repos\MS Teams\Meeting Policy Evaluation\TeamsMeetingPolicies.csv" -NoTypeInformation
 
 
 $CallPolicy = Get-CSTeamsCallingPolicy | Select-Object -Property * -ExcludeProperty XsAnyElements,XsAnyAttributes,Element,CommaSeparator,pscomputerName,RunspaceId,PSShowComputerName 
 $CallPolicyPiv = PivotPolicyData -Data $CallPolicy -PolicyURI "https://docs.microsoft.com/en-us/powershell/module/skype/set-csteamscallingpolicy?view=skype-ps"
-$CallPolicyPiv[0].Table | Export-csv -Path "C:\Users\604117500\OneDrive - BT Plc\Documents\GIT Repos\MS Teams\Meeting Policy Evaluation\CallPolicies.csv" 
+$CallPolicyPiv[0].Table | Export-csv -Path "C:\Users\Documents\GIT Repos\MS Teams\Meeting Policy Evaluation\CallPolicies.csv" 
 
